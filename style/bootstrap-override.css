@@ -1,0 +1,30 @@
+:root {
+    --color1: black;
+    --color2: yellow;
+    --color3: red;
+}
+
+/** BOOTSTRAP CSS OVERRIDE **/
+
+.form-control:focus {
+    border-color: var(--color1)!important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--color2)!important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--color2)!important;
+}
+
+.btn:hover {
+    border-color: var(--color1)!important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--color2)!important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--color2)!important;
+}
+
+.dropdown-toggle {
+    background-color: #E9ECEF!important;
+    color: #495057!important;
+    border: 1px solid #ced4da!important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: var(--color1)!important;
+    background-color: #E9ECEF!important;
+}
