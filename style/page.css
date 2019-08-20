@@ -1,0 +1,177 @@
+/** CE FICHIER CSS CONTIENT L ENSEMBLE DE LA DEFINITION D UN TEMPLATE DE PAGE
+ADMIN AVEC SIDEBAR|TOPBAR ET GESTION DES DEUX VIA REDUX **/
+
+/** TEMPLATE HTML :
+    <div id="root">
+        <div class="page">
+            <ul class="page-disposition>
+                <li>
+                    <div class="sidebar">
+                        <div class="sidebar-head">
+                            TITLE
+                        </div>
+                        <ul class="sidebar-links">
+                            <li class="sidebar-link"><svg class="sidebar-icon"/></li>
+                            ...
+                        </ul>
+                    </div>
+                </li>
+                <li class="content">
+                    <ul class="topbar">
+                        <li><svg class="burger-toggler"/></li>
+                        <li>
+                            <ul class="topbar-options>
+                                <li>option</li>
+                                ...
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="container-fluid">
+                        COMPONENTS GOES HERE
+                    </div>
+                    <div class="footer">
+                        footer
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+**/
+
+/** Page complete **/
+
+.page {
+    min-height: 100vh;
+    background-color: var(--main-light-bg-color);
+}
+
+.page-disposition {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/** Sidebar **/
+
+.sidebar {
+    min-height: 100vh;
+    width: var(--main-sidebar-width);
+    background: var(--main-bg-color);
+}
+
+.sidebar-head {
+    background: var(--main-sidebar-bg-color);
+    color: white;
+    border-bottom: 100px solid var(--main-dark-bg-color);
+    padding-top: 20px;
+    border-left: 0 solid transparent;
+    border-right: 120px solid transparent;
+    height: 0;
+    width: var(--main-sidebar-width);
+}
+
+.sidebar-link {
+    padding: 10px 15px 10px 30px;
+    color: var(--main-sidebar-item-color);
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar-link:hover {
+    background: var(--main-dark-bg-color);
+    color: white;
+}
+
+.sidebar-link-selected {
+    border-left: 5px solid var(--main-green-color);
+    padding: 10px 15px 10px 25px;
+    background: var(--main-dark-bg-color);
+}
+
+.sidebar-icon {
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+
+@media(max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/** Sidebar small **/
+
+.sidebar-toggled {
+    min-height: 100vh;
+    width: 70px;
+    background: var(--main-bg-color);
+}
+
+.sidebar-toggled .sidebar-toggled-head {
+    background: var(--main-dark-bg-color);
+    color: white;
+    padding: 20px 5px 20px 5px;
+}
+
+.sidebar-toggled-link {
+    padding: 10px 5px 10px 22px;
+    color: var(--main-sidebar-item-color);
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar-toggled-link:hover {
+    background: var(--main-dark-bg-color);
+    color: white;
+}
+
+.sidebar-toggled-link-selected {
+    padding: 10px 5px 10px 17px;
+    border-left: 5px solid var(--main-green-color);
+    background: var(--main-dark-bg-color);
+}
+
+/** Contenu de la page **/
+
+.content {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/** Footer **/
+
+.footer {
+    background: white;
+    bottom: 0;
+    padding: 15px;
+}
+
+/** Topbar **/
+
+.topbar {
+    background: white;
+    padding: 20px 10px 15px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.burger-toggler {
+    color: white;
+    background: var(--main-green-color);
+    font-size: 2em;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.burger-toggler:hover {
+    background: var(--main-dark-green-color);
+}
+
+.topbar-options {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
